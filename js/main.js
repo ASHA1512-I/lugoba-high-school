@@ -89,6 +89,18 @@ if (admissionForm) {
   });
 }
 
+// Replace placeholder footer text with accessible platform icons.
+const socialIcons = [
+  { name: 'Facebook', path: 'M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H16V3.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V10H7.5v3h2.6v8h3.4Z' },
+  { name: 'TikTok', path: 'M16.7 3c.4 2.6 1.8 4.2 4.3 4.4v3c-1.6.1-3-.4-4.2-1.2v6.3c0 4-4.4 6.5-7.9 4.1-2.3-1.6-2.8-5.1-1.2-7.3 1.6-2.2 4.4-2.2 5-1.9v3.1c-.4-.1-.9-.2-1.3-.1-1.1.2-1.8 1.3-1.5 2.4.3 1.3 1.8 1.9 2.9 1.2.7-.4.9-1.2.9-2.1V3h3Z' },
+  { name: 'Instagram', path: 'M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.8 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z' },
+  { name: 'LinkedIn', path: 'M5.3 3.5A1.8 1.8 0 1 1 5.3 7a1.8 1.8 0 0 1 0-3.5ZM3.8 8.5h3v12h-3v-12Zm5 0h2.9v1.6h.1c.4-.8 1.4-2 3.3-2 3.5 0 4.1 2.3 4.1 5.3v7.1h-3v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.4h-3v-12Z' }
+];
+document.querySelectorAll('.fsocial').forEach(social => {
+  social.setAttribute('aria-label', 'School social media');
+  social.innerHTML = socialIcons.map(({ name, path }) => `<a class='social-link' aria-disabled='true' tabindex='-1' title='${name} account coming soon' aria-label='${name} account coming soon'><svg viewBox='0 0 24 24' aria-hidden='true' style='width:19px;height:19px;display:block'><path fill='currentColor' d='${path}'/></svg><span class='sr-only' style='position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0'>${name}</span></a>`).join('');
+});
+
 // Footer year
 const yr = document.getElementById('year');
 if (yr) yr.textContent = new Date().getFullYear();
