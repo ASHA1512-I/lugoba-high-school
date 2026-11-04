@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asha1512-i.github.io/lugoba-high-school/sitemap.xml
