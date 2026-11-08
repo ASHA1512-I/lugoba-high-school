@@ -195,8 +195,9 @@ form textarea{min-height:130px;resize:vertical}
 .copy span{color:var(--yellow)}
 
 /* reveal animation */
-.reveal{opacity:0;transform:translateY(30px);transition:.7s ease}
-.reveal.show{opacity:1;transform:none}
+/* Keep content visible if JavaScript is unavailable or fails. */
+.js .reveal{opacity:0;transform:translateY(30px);transition:.7s ease}
+.js .reveal.show{opacity:1;transform:none}
 
 /* responsive */
 @media(max-width:960px){
