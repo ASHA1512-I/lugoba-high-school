@@ -1,3 +1,4 @@
+@import url("shared-redesign.css");
 /* Homepage only: independent of the shared page layouts. */
 .home-page{--home-red:#9e1e20;--home-red-deep:#601518;--home-gold:#e9bc54;--home-ink:#211d1b;--home-muted:#615c58;--home-paper:#f7f5f0;background:#fff;color:var(--home-ink)}
 .home-page .home-wrap{width:min(100% - 48px,1200px);margin-inline:auto}
