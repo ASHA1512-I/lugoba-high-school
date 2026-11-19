@@ -1,0 +1,136 @@
+
+/* Shared school design: restrained red, warm gold, generous editorial spacing. */
+:root{
+  --red:#a91620;
+  --red-dark:#791019;
+  --cream:#faf8f3;
+  --black:#211a19;
+  --orange:#bb7c26;
+  --yellow:#e5bc61;
+  --ink:#292322;
+  --muted:#625c57;
+  --line:#e8e0d5;
+  --shadow:0 12px 35px rgba(55,35,25,.08);
+  --radius:12px;
+  --maxw:1200px;
+  --font:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --head:Georgia,'Times New Roman',serif;
+}
+body{font-size:1rem;line-height:1.7}
+h1,h2,h3,h4{letter-spacing:-.025em}
+p{overflow-wrap:break-word}
+.container{padding-inline:clamp(20px,4vw,32px)}
+:focus-visible{outline:3px solid #b47711;outline-offset:3px}
+form input:focus-visible,form select:focus-visible,form textarea:focus-visible{outline:3px solid #b47711;outline-offset:2px}
+
+/* Header is shared by every page, including the homepage. */
+.header{background:#fff;box-shadow:0 2px 18px rgba(42,26,20,.08)}
+.nav{gap:20px;min-height:88px;padding:12px clamp(20px,4vw,32px)}
+.brand{flex-shrink:0;gap:12px}
+.brand img{width:58px;height:58px;object-fit:contain;border-radius:0}
+.brand .bt{color:var(--red-dark);font-size:1.18rem;letter-spacing:-.02em}
+.brand .bs{font-size:.62rem;letter-spacing:.14em;line-height:1.6}
+.menu{gap:2px}
+.menu a{display:block;font-size:.86rem;padding:10px 11px;white-space:nowrap}
+.menu a:hover,.menu a.active{color:var(--red-dark);background:#f8efed}
+.menu a.btn-primary,.menu a.btn-primary.active{background:var(--red);color:#fff;border-radius:6px;padding:10px 19px}
+.menu a.btn-primary:hover{background:var(--red-dark);color:#fff}
+.burger{min-width:44px;min-height:44px;align-items:center;justify-content:center;border-radius:6px}
+.burger span{width:23px;height:2px;background:var(--red-dark)}
+
+/* Page banners and content layouts. */
+.banner{padding:clamp(76px,10vw,125px) 0 clamp(70px,8vw,100px);background:linear-gradient(110deg,rgba(42,15,16,.92),rgba(116,17,27,.82)),url('../img/image 2.jpg') center 40%/cover;text-align:center;border-bottom:4px solid var(--yellow)}
+.banner h1{font-size:clamp(2.5rem,5vw,4.15rem);line-height:1.08;letter-spacing:-.035em;margin-bottom:16px}
+.banner .crumbs{font-size:.9rem;color:#f5eae7}
+.banner .crumbs a{text-decoration:underline;text-underline-offset:4px}
+.banner .crumbs span{color:#f7d997}
+.sec{padding:clamp(64px,8vw,100px) 0}
+.sec-head{max-width:720px;margin:0 auto clamp(38px,5vw,56px)}
+.sec-head h2,.two-col h2{font-size:clamp(2rem,3.4vw,3rem);line-height:1.14;margin-bottom:18px}
+.sec-head .kicker,.two-col .kicker{font-size:.74rem;letter-spacing:.16em;color:var(--red-dark);margin-bottom:12px}
+.sec-head p{margin-top:20px}
+.sec-head .btn{margin-top:24px}
+.divider{width:54px;height:3px;background:var(--yellow);margin:18px auto 0}
+.two-col{gap:clamp(32px,5vw,72px)}
+.two-col > *{min-width:0}
+.two-col img{height:auto;min-height:320px;max-height:460px;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+.two-col img[src*='badge']{object-fit:contain;background:#fff;padding:30px}
+.two-col p{max-width:62ch;margin-bottom:18px}
+.two-col .btn{margin-top:8px}
+.why{background:#f3efe7}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:6px;line-height:1.25;transition:background-color .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--red)}
+.btn-primary:hover,.btn-dark:hover{transform:none}
+.btn-dark{background:var(--red-dark)}
+.btn-dark:hover{background:#5d0d14}
+.btn-ghost:hover{color:var(--red-dark)}
+
+/* Card and image treatments, including the gallery's plain card images. */
+.grid-3,.grid-2{gap:clamp(20px,2.4vw,28px)}
+.card{border:1px solid var(--line);box-shadow:0 8px 28px rgba(55,35,25,.06);transition:box-shadow .2s,border-color .2s}
+.card:hover{transform:none;border-color:#d9c9b5;box-shadow:0 12px 32px rgba(55,35,25,.1)}
+.card-body{padding:clamp(24px,3vw,32px)}
+.card-body h3{font-size:1.35rem;line-height:1.25}
+.card-body p{font-size:.98rem;line-height:1.7}
+.card .ico{width:58px;height:58px;background:#f8ede5;color:var(--red-dark);font-size:1.5rem;border-radius:10px}
+.card > img,.card > a > img,.card img.top{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.readmore{color:var(--red-dark);text-decoration:underline;text-underline-offset:4px}
+.cta{padding:clamp(64px,7vw,88px) 0;background:linear-gradient(120deg,#781019,#a91b24)}
+.cta h2{font-size:clamp(2rem,3.5vw,3rem)}
+.cta p{color:#f9edeb}
+
+.footer{background:#211b1b;color:#e0d8d0;padding:clamp(56px,7vw,80px) 0 0;border-top:4px solid var(--yellow)}
+.footer .fgrid{grid-template-columns:1.5fr 1fr 1.2fr;gap:clamp(28px,4vw,56px);padding-bottom:48px}
+.footer h4{font-size:1.08rem;margin-bottom:18px}
+.footer h4:after{height:2px}
+.footer .fbrand img{object-fit:contain;background:#fff}
+.footer a:hover{color:#f6d28b}
+.footer ul a:hover{padding-left:0;text-decoration:underline;text-underline-offset:4px}
+.copy{color:#c6bab0;padding-inline:20px}
+
+/* Content remains visible if JS or an observer is unavailable. */
+.js .reveal,.js .reveal.show{opacity:1;transform:none;transition:none}
+@media(max-width:1100px){
+  .nav{gap:12px}
+  .menu a{padding-inline:8px;font-size:.8rem}
+  .brand .bt{font-size:1.05rem}
+}
+@media(max-width:900px){
+  .header{position:relative;top:auto}
+  .nav{flex-wrap:wrap;min-height:0;justify-content:space-between}
+  .brand{max-width:calc(100% - 60px)}
+  .brand img{width:50px;height:50px}
+  .burger{display:flex;order:2;z-index:auto}
+  /* Without JS the links remain reachable in a horizontal scrolling row.
+     The existing .open toggle expands them into a vertical menu. */
+  .menu{position:static;order:3;right:auto;top:auto;width:100%;max-width:none;height:auto;max-height:none;display:flex;flex-direction:row;align-items:center;gap:4px;overflow-x:auto;overflow-y:hidden;padding:4px 0 8px;background:transparent;box-shadow:none;transition:none;overscroll-behavior-inline:contain}
+  .menu li{flex:0 0 auto}
+  .menu a{width:auto;color:var(--ink);padding:10px 12px;font-size:.9rem}
+  .menu a:hover,.menu a.active{background:#f8efed;color:var(--red-dark)}
+  .menu .btn{margin:0}
+  .menu.open{right:auto;display:flex;flex-direction:column;align-items:stretch;overflow:visible;padding:8px 0 12px;border-top:1px solid var(--line)}
+  .menu.open li,.menu.open a{width:100%}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:720px){
+  /* The enhanced script marks the closed menu hidden; without it the row stays available. */
+  .menu[aria-hidden='true']:not(.open){display:none}
+  .container{padding-inline:20px}
+  .nav{padding-inline:20px}
+  .brand .bt{font-size:1rem}
+  .brand .bs{font-size:.59rem}
+  .banner{padding:68px 0 62px}
+  .two-col{gap:28px}
+  .two-col img{min-height:0;max-height:360px}
+  .footer .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .footer .fgrid{grid-template-columns:1fr;gap:28px}
+  .card-body{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
